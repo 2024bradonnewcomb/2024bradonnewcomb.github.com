@@ -25,7 +25,7 @@ gdjs.Level_32SelectCode.condition2IsTrue_0 = {val:false};
 gdjs.Level_32SelectCode.condition3IsTrue_0 = {val:false};
 
 
-gdjs.Level_32SelectCode.mapOfGDgdjs_46Level_9532SelectCode_46GDBackObjects1Objects = Hashtable.newFrom({"Back": gdjs.Level_32SelectCode.GDBackObjects1});gdjs.Level_32SelectCode.mapOfGDgdjs_46Level_9532SelectCode_46GDLevel_9595SelectObjects1Objects = Hashtable.newFrom({"Level_Select": gdjs.Level_32SelectCode.GDLevel_95SelectObjects1});gdjs.Level_32SelectCode.mapOfGDgdjs_46Level_9532SelectCode_46GDN1Objects1Objects = Hashtable.newFrom({"N1": gdjs.Level_32SelectCode.GDN1Objects1});gdjs.Level_32SelectCode.mapOfGDgdjs_46Level_9532SelectCode_46GDN2Objects1Objects = Hashtable.newFrom({"N2": gdjs.Level_32SelectCode.GDN2Objects1});gdjs.Level_32SelectCode.eventsList0 = function(runtimeScene) {
+gdjs.Level_32SelectCode.mapOfGDgdjs_46Level_9532SelectCode_46GDBackObjects1Objects = Hashtable.newFrom({"Back": gdjs.Level_32SelectCode.GDBackObjects1});gdjs.Level_32SelectCode.mapOfGDgdjs_46Level_9532SelectCode_46GDLevel_9595SelectObjects1Objects = Hashtable.newFrom({"Level_Select": gdjs.Level_32SelectCode.GDLevel_95SelectObjects1});gdjs.Level_32SelectCode.mapOfGDgdjs_46Level_9532SelectCode_46GDN1Objects1Objects = Hashtable.newFrom({"N1": gdjs.Level_32SelectCode.GDN1Objects1});gdjs.Level_32SelectCode.mapOfGDgdjs_46Level_9532SelectCode_46GDN2Objects1Objects = Hashtable.newFrom({"N2": gdjs.Level_32SelectCode.GDN2Objects1});gdjs.Level_32SelectCode.mapOfGDgdjs_46Level_9532SelectCode_46GDN2Objects1Objects = Hashtable.newFrom({"N2": gdjs.Level_32SelectCode.GDN2Objects1});gdjs.Level_32SelectCode.eventsList0 = function(runtimeScene) {
 
 {
 
@@ -102,6 +102,30 @@ gdjs.Level_32SelectCode.condition2IsTrue_0.val = gdjs.evtTools.common.getVariabl
 }
 if (gdjs.Level_32SelectCode.condition2IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level 2", false);
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("N2"), gdjs.Level_32SelectCode.GDN2Objects1);
+
+gdjs.Level_32SelectCode.condition0IsTrue_0.val = false;
+gdjs.Level_32SelectCode.condition1IsTrue_0.val = false;
+gdjs.Level_32SelectCode.condition2IsTrue_0.val = false;
+{
+gdjs.Level_32SelectCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.Level_32SelectCode.mapOfGDgdjs_46Level_9532SelectCode_46GDN2Objects1Objects, runtimeScene, true, false);
+}if ( gdjs.Level_32SelectCode.condition0IsTrue_0.val ) {
+{
+gdjs.Level_32SelectCode.condition1IsTrue_0.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
+}if ( gdjs.Level_32SelectCode.condition1IsTrue_0.val ) {
+{
+gdjs.Level_32SelectCode.condition2IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(0)) >= 3;
+}}
+}
+if (gdjs.Level_32SelectCode.condition2IsTrue_0.val) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level 3", false);
 }}
 
 }
